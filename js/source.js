@@ -1,3 +1,9 @@
+//make form entry from event
+function makeFormEntriesArray(event) {
+  const formData = new FormData(event.target);
+  return Array.from(formData.entries());//Array.from(arrayLike) : an iterator(array like) to an array
+}
+
 //get current time
 function timeStamp() {
   const currentTime = new Date();
@@ -11,7 +17,7 @@ function timeStamp() {
   return `${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초`;
 };
 
-//extract user input data from from submit
+//extract user input data object from from submit
 function extractDataFromFormSubmit(entriesArray,currentTime) {
   let extractedData = {};
   for (let entry of entriesArray) {
@@ -24,21 +30,23 @@ function extractDataFromFormSubmit(entriesArray,currentTime) {
 }
 
 //create sent mail node via form data user written
-function createSentMailNode(formData) {
+function createSentMailNode(data) {
   //create node
   const sentMailNode = document.createElement("div");
+  const paragraphNode = document.createElement("P");
   //create textnode
-  const category = document.createTextNode(`분류: ${formData.category}  `);
-  const desitination = document.createTextNode(`받는사람: ${formData.desitination}  `);
-  const title = document.createTextNode(`제목: ${formData.title}  `);
-  const time = document.createTextNode(`보낸시간: ${formData.time}  `);
-  const comment = document.createTextNode(`내용: ${formData.comment}  `);
+  const category = document.createTextNode(`분류: ${data.category}  `);
+  const desitination = document.createTextNode(`받는사람: ${data.desitination}  `);
+  const title = document.createTextNode(`제목: ${data.title}  `);
+  const time = document.createTextNode(`보낸시간: ${data.time}  `);
+  const comment = document.createTextNode(`내용: ${data.comment}  `);
   //make one sent mail node via appendchild
   sentMailNode.appendChild(category);
   sentMailNode.appendChild(desitination);
   sentMailNode.appendChild(title);
   sentMailNode.appendChild(time);
-  sentMailNode.appendChild(comment);
+  paragraphNode.appendChild(comment);
+  sentMailNode.appendChild(paragraphNode);
 
   return sentMailNode;
 }

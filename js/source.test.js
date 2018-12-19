@@ -45,7 +45,7 @@ describe('createSentMainNode function', () => {
       time:"2018년 12월 19일 20시 02분",
       comment:"안녕 2018년!",
     }
-    const mockNode = '<div>분류: 가족  받는사람: 이기백  제목: 안녕  보낸시간: 2018년 12월 19일 20시 02분  내용: 안녕 2018년!  </div>'
+    const mockNode = '<div>분류: 가족  받는사람: 이기백  제목: 안녕  보낸시간: 2018년 12월 19일 20시 02분  <p>내용: 안녕 2018년!  </p></div>'
     chai.expect(createSentMailNode(mockInput).outerHTML).to.equal(mockNode);
   });
 });

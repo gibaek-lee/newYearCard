@@ -3,12 +3,17 @@ body header section footer {
 }
 
 body {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: auto;
+  max-width: 600px;
 }
 
 p {
-  margin: 0;}
+  margin: 0;
+}
+
+footer {
+  border-top: 1px solid black;
+}
 
 input[type=text] {
   border: none;
@@ -21,6 +26,7 @@ textarea {
   width: 100%;
   min-height: 150px;
   resize: vertical;
+  padding: 0;
 }
 
 .category {
@@ -39,7 +45,8 @@ textarea {
 }
 
 .sent-box div{
-  height: 20px;
+  height: auto;
   margin-bottom: 5px;
-  overflow: hidden;
+  border-bottom: 1px dashed black;
+  overflow: auto;
 }
