@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>한해를 마무리하는 감사 카드를 보내자!</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <h2>우리 함께 감사 카드를 보내요!</h2>
+    </header>
+    <section>
+      <div class="body-mail">
+        <form action="" id="send-form">
+          <div class="category">
+            <input type="radio" name="category" value="동료" checked> 동료
+            <input type="radio" name="category" value="친구"> 친구
+            <input type="radio" name="category" value="가족"> 가족
+          </div>
+          <div class="send-info">
+            받는사람 <input type="text" name="desitination"><br>
+            제목 <input type="text" name="title"><br>
+          </div>
+          <div class="main-and-submit">
+            <textarea name="comment"></textarea><br>
+            <input type="reset">
+            <input type="submit" id="submit">
+        </form>
+      </div>
+      <div class="sent-box">
+      </div>
+    </section>
+    <footer>
+      <p>2018.12.19. - 12.20. Dev. Gibaek Lee. All right reserved.</p>
+    </footer>
+    <script src="js/sentMail.js"></script>
+  </body>
+
+</html>
