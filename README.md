@@ -15,7 +15,7 @@
 #### Scaffolding technique using custom assert function
 - js: source.js | assert()
 
-### Libraries
+## Libraries
 - Mocha and Chai, only.
 - Reason: For testing vanilla javascript code. Jest and Enzyme need node.js enviroment, it's too heavy to small application like this.
 - Weakness Mocah/Chai compare to Jest/Enzyme: No mock event test, but can overcome with a scaffolding technique using custom assert function .
