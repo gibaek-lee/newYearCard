@@ -1,6 +1,7 @@
 /* how to test
-1. source.js의 function return이 맞게 나오는지 mock test
-2. function 내부의 parameter와 관련된 세부사항은 직접 function 안에 assert()로 scaffolding
+1. source.js의 function return이 맞게 나오는지 mock test.
+2. function 내부의 parameter와 관련된 세부사항, return이 없는 함수는
+  직접 function 안에 assert()로 scaffolding 함.
 */
 describe('timeStamp function', () => {
   const expect = chai.expect;

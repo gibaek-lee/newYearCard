@@ -6,9 +6,10 @@ const assert = (isTrue, memo) => { //test scaffolding
 
 const source = { //namespace 활용. 외부 파일에서 접근시 어느 파일의 함수인지 확인
   checkEmptyInput : (entries) => {
+    assert(entries, 'entries is not defined');
     for(let i = 0; i < entries.length; i++){
       if(!entries[i][1]){
-        alert(`${entries[i][0]}을 기록해주세요.`);
+        alert('기록되지 않은 것이 있습니다!');
         return false;
       }
     }
@@ -54,11 +55,11 @@ const source = { //namespace 활용. 외부 파일에서 접근시 어느 파일
     const paragraphNode = document.createElement("P");
 
     //create textnode
-    const category = document.createTextNode(`분류: ${data.category}  `);
-    const desitination = document.createTextNode(`받는사람: ${data.desitination}  `);
-    const title = document.createTextNode(`제목: ${data.title}  `);
-    const time = document.createTextNode(`보낸시간: ${data.time}  `);
-    const comment = document.createTextNode(`내용: ${data.comment}  `);
+    const category = document.createTextNode(`분류: ${data.category} `);
+    const desitination = document.createTextNode(`받는사람: ${data.desitination} `);
+    const title = document.createTextNode(`제목: ${data.title} `);
+    const time = document.createTextNode(`보낸시간: ${data.time} `);
+    const comment = document.createTextNode(`내용: ${data.comment} `);
 
     //make one sent mail node via appendchild
     sentMailNode.appendChild(category);

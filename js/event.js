@@ -1,5 +1,4 @@
 (() => { //prevent global variable. Capsuling via IIFE and Closure pattern.
-
   let timer; //for throttle
   const submitNode = document.querySelector('#submit'); //for disable toggle
 
@@ -42,5 +41,4 @@
       submitNode.disabled = true;//submit button disabled
     }
   });
-
 })();

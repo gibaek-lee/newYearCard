@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body header section footer {
   width: 100%;
 }
@@ -6,6 +10,18 @@ body {
   margin: auto;
   max-width: 800px;
   padding: 20px;
+  min-height: 100%;
+  background-color: gray;
+}
+
+header h2{
+  background-color: #B22222;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+  margin-top: 0;
 }
 
 p {
@@ -23,11 +39,25 @@ input[type=text] {
   margin-bottom: 20px;
 }
 
+.main-and-submit input {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 textarea {
   width: 100%;
-  min-height: 150px;
+  min-height: 100px;
   resize: vertical;
   padding: 0;
+  border-radius: 5px;
 }
 
 .category {
@@ -39,10 +69,11 @@ textarea {
 }
 
 .sent-box {
-  height: 100px;
-  overflow: auto;
+  min-height: 150px;
   border: 1px solid;
   margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: white;
 }
 
 .sent-box div{
