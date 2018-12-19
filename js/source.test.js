@@ -1,3 +1,7 @@
+/* how to test
+1. source.js의 function return이 맞게 나오는지 mock test
+2. function 내부의 parameter와 관련된 세부사항은 직접 function 안에 assert()로 scaffolding
+*/
 describe('timeStamp function', () => {
   const expect = chai.expect;
 
@@ -12,7 +16,7 @@ describe('timeStamp function', () => {
       const hours = currentTime.getHours();
       return `${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분 ${seconds}초`;
     }
-    expect(timeStamp()).to.equal(mockGetTime());
+    expect(source.timeStamp()).to.equal(mockGetTime());
   });
 });
 
@@ -35,7 +39,7 @@ describe('extractDataFromFormSubmit function', () => {
       time: "2018년 12월 19일 20시 02분"
     }
     //object 비교는 깊게 해야하므로 간단하게 string으로 비교한다.
-    expect(String(extractDataFromFormSubmit(mockEntriesArray,mockCurrentTime))).to.equal(String(mockExtractedData));
+    expect(String(source.extractDataFromFormSubmit(mockEntriesArray,mockCurrentTime))).to.equal(String(mockExtractedData));
   });
 });
 
@@ -51,6 +55,6 @@ describe('createSentMainNode function', () => {
       comment:"안녕 2018년!",
     }
     const mockNode = '<div>분류: 가족  받는사람: 이기백  제목: 안녕  보낸시간: 2018년 12월 19일 20시 02분  <p>내용: 안녕 2018년!  </p></div>'
-    expect(createSentMailNode(mockInput).outerHTML).to.equal(mockNode);
+    expect(source.createSentMailNode(mockInput).outerHTML).to.equal(mockNode);
   });
 });
