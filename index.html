@@ -7,7 +7,7 @@
   </head>
   <body>
     <header>
-      <h2>우리 함께 감사 카드를 보내요!</h2>
+      <h2>우리 함께 연말 감사 카드를 보내요!</h2>
     </header>
     <section>
       <div class="body-mail">
@@ -18,16 +18,18 @@
             <input type="radio" name="category" value="가족"> 가족
           </div>
           <div class="send-info">
-            받는사람 <input type="text" name="desitination"><br>
+            받는 사람 <input type="text" name="desitination"><br>
             제목 <input type="text" name="title"><br>
           </div>
           <div class="main-and-submit">
             <textarea name="comment"></textarea><br>
-            <input type="reset">
             <input type="submit" id="submit">
+            <input type="reset">
         </form>
       </div>
-      <div class="sent-box">
+      <div class="sent-box-container">
+        <p id="sent-box-p">보낸 카드함</p>
+        <div class="sent-box"></div>
       </div>
     </section>
     <footer>

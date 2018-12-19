@@ -34,15 +34,18 @@ function timeStamp(){
 function createSentMailList(data){
   //create node
   const sentMailNode = document.createElement("div");
+  //create textnode
   const category = document.createTextNode(`분류: ${data.category}  `);
   const desitination = document.createTextNode(`받는사람: ${data.desitination}  `);
   const title = document.createTextNode(`제목: ${data.title}  `);
+  const comment = document.createTextNode(`내용: ${data.comment}  `);
   const time = document.createTextNode(`보낸시간: ${data.time}  `);
   //make one sent mail node via appendchild
   sentMailNode.appendChild(category);
   sentMailNode.appendChild(desitination);
   sentMailNode.appendChild(title);
   sentMailNode.appendChild(time);
+  sentMailNode.appendChild(comment);
   //get sent-box node to append now sent mail node
   const sentBoxNode = document.getElementsByClassName("sent-box");
   //append sent mail node
