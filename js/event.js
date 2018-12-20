@@ -1,8 +1,10 @@
-(() => { //prevent global variable. Capsuling via IIFE and Closure pattern.
+document.querySelector('form').addEventListener('submit', submitEventCallback(event));
+
+function submitEventCallback() { //prevent global variable. Capsuling via Closure pattern.
   let timer; //for throttle
   const submitNode = document.querySelector('#submit'); //for disable toggle
 
-  document.querySelector('form').addEventListener('submit', (event) => {
+  const closure = (event) => {
     assert(event,'event is not defined');
     event.preventDefault();//submit 후 refresh 방지
 
@@ -40,5 +42,6 @@
 
       submitNode.disabled = true;//submit button disabled
     }
-  });
-})();
+  }
+  return closure;
+};

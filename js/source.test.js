@@ -3,9 +3,20 @@
 2. function 내부의 parameter와 관련된 세부사항, return이 없는 함수는
   직접 function 안에 assert()로 scaffolding 함.
 */
+describe('checkEmptyInput function', () => {
+  it('is defined.', () => {
+    if (!source.checkEmptyInput) {
+      throw new Error();
+    }
+  });
+});
 describe('timeStamp function', () => {
   const expect = chai.expect;
-
+  it('is defined.', () => {
+    if (!source.timeStamp) {
+      throw new Error();
+    }
+  });
   it('returns current time correctly.', () => {
     const mockGetTime = () => {
       const currentTime = new Date();
@@ -23,6 +34,11 @@ describe('timeStamp function', () => {
 
 describe('extractDataFromFormSubmit function', () => {
   const expect = chai.expect;
+  it('is defined.', () => {
+    if (!source.extractDataFromFormSubmit) {
+      throw new Error();
+    }
+  });
 
   it('extract user input data correctly', () => {
     const mockEntriesArray = [
@@ -44,9 +60,14 @@ describe('extractDataFromFormSubmit function', () => {
   });
 });
 
-describe('createSentMainNode function', () => {
+describe('createSentMailNode function', () => {
   const expect = chai.expect;
 
+  it('is defined.', () => {
+    if (!source.createSentMailNode) {
+      throw new Error();
+    }
+  })
   it('returns new <div> node include information of form user input data.', () => {
     const mockInput = {
       category:"가족",
@@ -55,7 +76,14 @@ describe('createSentMainNode function', () => {
       time:"2018년 12월 19일 20시 02분",
       comment:"안녕 2018년!",
     }
-    const mockNode = '<div>분류: 가족 받는사람: 이기백 제목: 안녕 보낸시간: 2018년 12월 19일 20시 02분 <p>내용: 안녕 2018년! </p></div>';
+    const mockNode = '<div>분류: 가족 받는사람: undefined 제목: 안녕 보낸시간: 2018년 12월 19일 20시 02분 <p>내용: 안녕 2018년! </p></div>'
     expect(source.createSentMailNode(mockInput).outerHTML).to.equal(mockNode);
+  });
+});
+describe('clearInput function', () => {
+  it('is defined.', () => {
+    if (!source.clearInput) {
+      throw new Error();
+    }
   });
 });

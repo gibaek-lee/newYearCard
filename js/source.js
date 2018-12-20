@@ -7,11 +7,21 @@ const assert = (isTrue, memo) => { //test scaffolding
 const source = { //namespace 활용. 외부 파일에서 접근시 어느 파일의 함수인지 확인
   checkEmptyInput : (entries) => {
     assert(entries, 'entries is not defined');
-    for(let i = 0; i < entries.length; i++){
-      if(!entries[i][1]){
-        alert('기록되지 않은 것이 있습니다!');
-        return false;
-      }
+
+    let emptyEntries = [];
+    entries.forEach((entry) => {
+      if(!entry[1]) emptyEntries.push(entry[0]);
+    });
+
+    if(emptyEntries.length) {
+      const message = emptyEntries.reduce((accum, value) => {
+        if(value === 'destination') value = '받는사람';
+        else if(value === 'title') value = '제목';
+        else value = '내용';
+        return accum + value + ', ';
+      }, '');
+      alert(`${message}을(를) 입력해주세요.`);
+      return false;
     }
   },
 
@@ -56,14 +66,14 @@ const source = { //namespace 활용. 외부 파일에서 접근시 어느 파일
 
     //create textnode
     const category = document.createTextNode(`분류: ${data.category} `);
-    const desitination = document.createTextNode(`받는사람: ${data.desitination} `);
+    const destination = document.createTextNode(`받는사람: ${data.destination} `);
     const title = document.createTextNode(`제목: ${data.title} `);
     const time = document.createTextNode(`보낸시간: ${data.time} `);
     const comment = document.createTextNode(`내용: ${data.comment} `);
 
     //make one sent mail node via appendchild
     sentMailNode.appendChild(category);
-    sentMailNode.appendChild(desitination);
+    sentMailNode.appendChild(destination);
     sentMailNode.appendChild(title);
     sentMailNode.appendChild(time);
     paragraphNode.appendChild(comment);
