@@ -30,6 +30,9 @@
   2. 함수 내부 실행의 처음 확인 | 함수로 들어오는 매개변수 유효성 확인
   3. 함수 내부 실행의 끝 확인 | 함수가 만든 반환값의 유효성 확인
 
+### 서버와 연동
+- eventListener의 콜백 안의 timer 콜백함수를 사용 | 서버 reponse 성공 시 timer 콜백함수가 실행되도록 해야함.
+
 ## Libraries
 - Mocha and Chai, only.
 - Reason: For testing vanilla javascript code. Jest and Enzyme need node.js enviroment, it's too heavy to small application like this.
