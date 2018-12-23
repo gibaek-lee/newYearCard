@@ -40,4 +40,4 @@
 
 ## Reference
 - about Scaffolding and Test code : [Jon Bentley. Programming Pearls 2/E. insight. 칼럼4. 칼럼5.](https://ginnyang2.github.io/Programming-Pearls/)
-- Mocha and Chai : Medium blog[Running Mocha Tests as Native ES6 Modules in a Browser](https://medium.com/dailyjs/running-mocha-tests-as-native-es6-modules-in-a-browser-882373f2ecb0)
+- Mocha and Chai : Medium blog [Running Mocha Tests as Native ES6 Modules in a Browser](https://medium.com/dailyjs/running-mocha-tests-as-native-es6-modules-in-a-browser-882373f2ecb0)
