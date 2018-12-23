@@ -25,7 +25,7 @@
 - Mocha and Chai
   1. 함수의 처음 확인 | 자바스크립트 엔진 가동 시 함수가 정의 되었는지 확인
   2. 함수의 끝 확인 | 함수가 가상의 매개변수로부터 원하는 결과값을 반환하는지 확인
-- assert 단정문
+- assert 단정문 : [Programming Pearls 칼럼4, 칼럼5 참조](https://ginnyang2.github.io/Programming-Pearls/)
   1. 함수 내부에서 점검
   2. 함수 내부 실행의 처음 확인 | 함수로 들어오는 매개변수 유효성 확인
   3. 함수 내부 실행의 끝 확인 | 함수가 만든 반환값의 유효성 확인
@@ -39,5 +39,5 @@
 - Weakness Mocah/Chai compare to Jest/Enzyme: No mock event test, but can overcome with a scaffolding technique using custom assert function .
 
 ## Reference
-- about Scaffolding and Test code : Jon Bentley. Programming Pearls 2/E. insight. 칼럼5.
+- about Scaffolding and Test code : [Jon Bentley. Programming Pearls 2/E. insight. 칼럼4. 칼럼5.](https://ginnyang2.github.io/Programming-Pearls/)
 - Mocha and Chai : Medium blog[Running Mocha Tests as Native ES6 Modules in a Browser](https://medium.com/dailyjs/running-mocha-tests-as-native-es6-modules-in-a-browser-882373f2ecb0)
