@@ -47,7 +47,7 @@ document.querySelector('#input').addEventListener('input', function (e) {
      }
 });
 ```
-- 호출 스택과 이벤트 루프에 따른 실행순서
+- 호출 스택과 이벤트루프에 따른 실행순서
 <p align="center">
   <img width="100%" src="callStackAndEventLoop.png" />
 </p>
@@ -60,3 +60,5 @@ document.querySelector('#input').addEventListener('input', function (e) {
 ## Reference
 - about Scaffolding and Test code : [Jon Bentley. Programming Pearls 2/E. insight. 칼럼4. 칼럼5.](https://ginnyang2.github.io/Programming-Pearls/)
 - Mocha and Chai : Medium blog [Running Mocha Tests as Native ES6 Modules in a Browser](https://medium.com/dailyjs/running-mocha-tests-as-native-es6-modules-in-a-browser-882373f2ecb0)
+- Throttling : [ZeroCho Blog-Javascript-쓰로틀링과 디바운싱](https://www.zerocho.com/category/JavaScript/post/59a8e9cb15ac0000182794fa)
+- 호출 스택과 이벤트루프 : [ZeroCho Blog-Javascript-호출 스택과 이벤트루프](https://www.zerocho.com/category/JavaScript/post/597f34bbb428530018e8e6e2)
