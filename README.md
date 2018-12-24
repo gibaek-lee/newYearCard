@@ -49,7 +49,7 @@ document.querySelector('#input').addEventListener('input', function (e) {
 ```
 - 호출 스택과 이벤트 루프에 따른 실행순서
 <p align="center">
-  <img width="30%" src="callStackAndEventLoop.png" />
+  <img width="100%" src="callStackAndEventLoop.png" />
 </p>
 
 ## Libraries
