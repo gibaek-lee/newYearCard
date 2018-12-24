@@ -3,12 +3,12 @@
 ## 실행
 - index.html | 새해 인사 카드 웹 실행
 <p align="center">
-  <img width="80%" src="newYearCardFrontPage.png" />
+  <img width="80%" src="image/newYearCardFrontPage.png" />
 </p>
 
 - test.html | 테스트 코드 웹 실행
 <p align="center">
-  <img width="80%" src="newYearCardTestCodePage.png" />
+  <img width="80%" src="image/newYearCardTestCodePage.png" />
 </p>
 
 ## Code Structure
@@ -56,7 +56,7 @@ document.querySelector('#input').addEventListener('input', function (e) {
 ```
 - 호출 스택과 이벤트루프에 따른 실행순서
 <p align="center">
-  <img width="100%" src="callStackAndEventLoop.png" />
+  <img width="100%" src="image/callStackAndEventLoop.png" />
 </p>
 
 ## Libraries
