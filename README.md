@@ -2,7 +2,14 @@
 
 ## 실행
 - index.html | 새해 인사 카드 웹 실행
+<p align="center">
+  <img width="80%" src="newYearCardFrontPage.png" />
+</p>
+
 - test.html | 테스트 코드 웹 실행
+<p align="center">
+  <img width="80%" src="newYearCardTestCodePage.png" />
+</p>
 
 ## Code Structure
 ### New Year Card 코드
