@@ -33,6 +33,25 @@
 ### 서버와 연동
 - eventListener의 콜백 안의 timer 콜백함수를 사용 | 서버 reponse 성공 시 timer 콜백함수가 실행되도록 해야함.
 
+### Submit eventListener Throttling
+- 과다 호출 방지 목적
+- Throttle 구현([참조.에버노트 Throttle and Debounce](https://www.evernote.com/shard/s313/sh/1a86f967-3a6f-4e0c-9a09-379cde66d061/766256837ee81cd8726b2b4a0c1e74c0))
+```
+var timer; //timer가 함수 스코프에서 선언되면 if문에서 무조건 undefined이므로 event 발생할 때마다 서로 다른 timer에 각각 setTimeout이 정의되서 throttle 구현 실패한다.
+document.querySelector('#input').addEventListener('input', function (e) {
+     if (!timer) { //첫번째 event에서 timer가 setTimeout function으로 정의되면 200ms 이후 실행되기 전에 if문 안으로 못 들어간다. 즉, 새로운 setTimeout이 정의되지 않아 특정 시간 안에 첫번째 이벤트만 실행시키려는 throttle의 목적을 달성한다.
+         timer = setTimeout(function() {
+             timer = null; //첫번째 이벤트가 200ms 이후에 실행된 후 timer가 제거되야 eventListener가 새로운 setTimeout을 정의할 수 있다.
+             console.log('여기에 마우스 스크롤 연동 애니메이션 이벤트', e.target.value);
+         }, 200);
+     }
+});
+```
+- 호출 스택과 이벤트 루프에 따른 실행순서
+<p align="center">
+  <img width="30%" src="callStackAndEventLoop.png" />
+</p>
+
 ## Libraries
 - Mocha and Chai, only.
 - Reason: For testing vanilla javascript code. Jest and Enzyme need node.js enviroment, it's too heavy to small application like this.
